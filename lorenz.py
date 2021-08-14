@@ -2,8 +2,8 @@
 
 from vectors import Point
 
-ITERATIONS = 2500
-DT = 0.01
+ITERATIONS = 17500
+DT = 0.001
 
 def lorenz(sigma = 10, rho = 28, beta = 8/3, start = Point(0,0,0)):
     history = []
@@ -32,10 +32,10 @@ def lorenz(sigma = 10, rho = 28, beta = 8/3, start = Point(0,0,0)):
 
 import matplotlib.pyplot as plt
 
-x, y, z = lorenz(start=Point(0, 0.5, 0))
+x, y, z = lorenz(start=Point(5, 0, 25))
 plt.plot(x, z)
 
-x, y, z = lorenz(start=Point(0, 1, 0))
+x, y, z = lorenz(start=Point(6, 0, 27))
 plt.plot(x, z)
 
 plt.show()
